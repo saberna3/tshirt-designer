@@ -1,109 +1,41 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LandingPage from "./components/LandingPage";
+import BottomNav from "./components/BottomNav";
+import "./App.css"; // Import the CSS file
+
+function App() {
+  return (
+    <div className="App">
+      {/* NAVIGATION BAR */}
+      <nav>
+        <h2>My T-Shirt Designer</h2>
+        <div>
+          <a href="/">Home</a>
+          <a href="/shop">Shop</a>
+          <a href="/design">Design</a>
+          <a href="/profile">Profile</a>
+        </div>
+      </nav>
+
+      {/* MAIN CONTENT */}
+      <div className="main-container">
+        <h1>Welcome to My T-Shirt Designer</h1>
+        <p className="subtext">Create your perfect custom t-shirt today!</p>
+
+        {/* BUTTONS */}
+        <div className="button-container">
+          <button className="btn">Start Shopping</button>
+          <button className="btn">Customize Your Own</button>
+        </div>
+      </div>
+
+      {/* FOOTER */}
+	
+      <footer className="footer">
+        © 2025 Personalized Perfection | All Rights Reserved
+      </footer>
+    </div>
+  );
 }
 
-/* Body Styling */
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #DFFFF6;
-  color: #003920;
-  text-align: center;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* NAVIGATION BAR */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background-color: #B2E8DB;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 60px; /* Fix navbar height */
-}
-
-nav h2 {
-  font-size: 1.5rem;
-}
-
-nav a {
-  text-decoration: none;
-  color: #003920;
-  font-weight: bold;
-  margin: 0 15px;
-}
-
-nav a:hover {
-  color: black;
-}
-
-/* MAIN CONTAINER */
-.main-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  margin-top: 100px; /* Ensures content is below navbar */
-  height: 80vh; /* Centers content vertically */
-
-}
-
-/* WELCOME MESSAGE */
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-}
-
-/* SUBTEXT */
-.subtext {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-/* BUTTONS */
-.button-container {
-  display: flex;
-  gap: 20px;
-}
-
-.btn {
-  background-color: #00503D;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #002A1E;
-}
-
-/* FOOTER */
-
-.footer {
-  background-color: #00503D;
-  color: white;
-  padding: 0px;
-  text-align: center;
-  width: 100%;
-  bottom: 0;
-display: flex;
-  flex-direction: column;
-
-
-}
-
+export default App;
